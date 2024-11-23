@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Script Runner</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    label {
+      font-weight: bold;
+    }
+    select, textarea, button {
+      width: 100%;
+      margin-top: 10px;
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 16px;
+    }
+    .result {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #e8f5e9;
+      font-family: monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Dynamic Script Runner</h1>
+    <form id="script-form">
+        <label for="script_type">Select Script</label>
+        <select name="script_type" id="script_type" required>
+          <!-- Options will be dynamically loaded -->
+        </select>
+        <div id="dynamic-parameters"></div>
+        <label for="input_text">Input Text</label>
+        <textarea name="input_text" id="input_text" rows="4" required></textarea>
+        <button type="button" id="run-script">Run Script</button>
+      </form>
+      <div class="result" id="result">
+        <strong>Output:</strong>
+        <p id="output"></p>
+      </div>      
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
